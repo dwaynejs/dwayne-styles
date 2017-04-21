@@ -1,0 +1,13 @@
+.idea/
+node_modules/
+
+src/
+test/
+
+.babelrc
+.editorconfig
+
+rollup.build.config.js
+rollup.test.config.js
+
+test.html
