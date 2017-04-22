@@ -57,6 +57,7 @@ Block.block('User', User);
 
 ```js
 // app/index.js
+
 import { Block } from 'dwayne';
 import styles from 'dwayne-styles';
 
@@ -93,7 +94,8 @@ Each style may be a common style (provided in the parameter for
 `styles` wrapper constructor) or a style which is set in a static
 `styles` property in the block class (which uses the `styles`
 mixin). Each style is a path to a styles object. All styles from
-the mixin are then merged and applied to the element.
+the mixin are then merged from left to right and applied to the
+element.
 
 Note that you can use `js` expressions as values (you may use
 [dwayne babel preset](https://www.npmjs.com/package/babel-preset-dwayne),
