@@ -80,13 +80,14 @@ Block.mixin('styles', Block.getMixin('d-style').wrap(
 ### API
 
 You may use the mixin in two ways: providing a string as a value
-which contains styles separated by a comma or a space OR providing
-mixin args. Note that the value is not watched.
+which contains styles separated by a comma, spaces or both OR
+providing mixin args. Note that the value is not watched.
 
 Example:
 
 ```html
 <div styles="styles1, prefix1.prefix2.styles2, prefix.styles"/>
+<div styles="styles1  prefix1.prefix2.styles2  prefix.styles"/>
 <div styles(styles1,prefix1.prefix2.styles2,prefix.styles)/>
 ```
 
@@ -98,7 +99,7 @@ the mixin are then merged from left to right and applied to the
 element.
 
 Note that you can use `js` expressions as values (you may use
-[dwayne babel preset](https://www.npmjs.com/package/babel-preset-dwayne),
+[dwayne babel preset](https://www.npmjs.com/package/babel-preset-dwayne)
 or set a pure function which excepts the block as the only parameter).
 They are watched and each time the result is changed the styles
 are applied again.
