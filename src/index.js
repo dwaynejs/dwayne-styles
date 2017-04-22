@@ -2,7 +2,6 @@ import get from 'lodash/get';
 import cloneDeep from 'lodash/cloneDeep';
 
 const { hasOwnProperty } = {};
-const { isArray } = Array;
 const SEPARATOR = /(?:,| ) */;
 
 export default (commonStyles) => {
@@ -27,10 +26,8 @@ export default (commonStyles) => {
         } else {
           const value = this.evaluate();
 
-          if (isString(value)) {
+          if (typeof value === 'string') {
             stylesNames = value.split(SEPARATOR);
-          } else if (isArray(value)) {
-            stylesNames = value.filter(isString);
           }
         }
 
@@ -85,8 +82,4 @@ function iterate(object, callback) {
       callback(object[key], key, object);
     }
   }
-}
-
-function isString(value) {
-  return typeof value === 'string';
 }
