@@ -8,6 +8,3 @@ test/
 .editorconfig
 
 rollup.build.config.js
-rollup.test.config.js
-
-test.html

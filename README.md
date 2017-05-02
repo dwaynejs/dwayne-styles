@@ -96,7 +96,7 @@ Each style may be a common style (provided in the parameter for
 `styles` property in the block class (which uses the `styles`
 mixin). Each style is a path to a styles object. All styles from
 the mixin are then merged from left to right and applied to the
-element.
+element. If the style value is undefined it's skipped.
 
 Note that you can use `js` expressions as values (you may use
 [dwayne babel preset](https://www.npmjs.com/package/babel-preset-dwayne)
