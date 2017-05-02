@@ -47,7 +47,7 @@ class User extends Block {
       }
     },
     visible: {
-      display: js`args.visible ? null : 'none'`
+      display: js`args.visible ? undefined : 'none'`
     }
   };
 }
