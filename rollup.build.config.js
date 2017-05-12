@@ -5,6 +5,9 @@ module.exports = {
   entry: './src/index.js',
   dest: './lib/index.js',
   format: 'cjs',
+  external: [
+    'dwayne'
+  ],
   plugins: [
     babel()
   ]
