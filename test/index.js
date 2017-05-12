@@ -1,36 +1,34 @@
 import { initApp } from 'dwayne-test-utils';
 import { deepStrictEqual } from 'assert';
 import { Block } from 'dwayne';
-import styles from '../src';
+import Styles from '../src';
 
 let remove;
 
-Block.mixin('styles', Block.getMixin('d-style').wrap(
-  styles({
-    absolute: {
-      position: 'absolute'
+Styles.addCommonStyles({
+  absolute: {
+    position: 'absolute'
+  },
+  disabled: {
+    color: 'rgb(187, 187, 187)',
+    pointerEvents: 'none'
+  },
+  nested: {
+    important: {
+      color: 'rgb(255, 0, 0)',
+      fontWeight: 'bold'
     },
-    disabled: {
-      color: 'rgb(187, 187, 187)',
-      pointerEvents: 'none'
-    },
-    nested: {
-      important: {
-        color: 'rgb(255, 0, 0)',
-        fontWeight: 'bold'
-      },
-      clickable: {
-        cursor: 'pointer'
-      }
+    clickable: {
+      cursor: 'pointer'
     }
-  })
-));
+  }
+});
 
 class App extends Block {
-  static template = html`
-    <div styles="absolute nested.clickable"/>
-    <div styles="absolute, relative, disabled"/>
-    <div styles(nested.important,caption)/>
+  static html = html`
+    <div Styles="absolute nested.clickable"/>
+    <div Styles="absolute, relative, disabled"/>
+    <div Styles(nested.important,caption)/>
   `;
   static styles = {
     caption: {

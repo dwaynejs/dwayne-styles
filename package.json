@@ -1,14 +1,14 @@
 {
   "name": "dwayne-styles",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "main": "lib/index.js",
   "devDependencies": {
     "babel-core": "^6.24.0",
-    "babel-preset-dwayne": "^1.2.0",
+    "babel-preset-dwayne": "^4.0.0",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.24.1",
-    "dwayne": "^3.0.0",
+    "dwayne": "^4.0.0",
     "dwayne-test-utils": "^1.0.1",
     "mocha": "^3.3.0",
     "rollup": "^0.41.6",
