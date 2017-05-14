@@ -1,7 +1,7 @@
 import { initApp } from 'dwayne-test-utils';
 import { deepStrictEqual } from 'assert';
 import { Block } from 'dwayne';
-import Styles from '../src';
+import { Styles } from '../src';
 
 let remove;
 

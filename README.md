@@ -15,7 +15,7 @@ $ npm install --save dwayne-styles
 
 ```html
 <script>
-  import Styles from 'dwayne-styles';
+  import { Styles } from 'dwayne-styles';
 </script>
 <!-- User/index.html -->
 
@@ -61,7 +61,7 @@ export default User;
 ```js
 // app/plugins.js
 
-import Styles from 'dwayne-styles';
+import { Styles } from 'dwayne-styles';
 
 // you can add default values to the mixin
 Styles.addCommonStyles({
