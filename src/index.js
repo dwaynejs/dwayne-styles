@@ -75,7 +75,7 @@ export function styles(commonStyles) {
             ns[key] = newValue;
 
             this.afterUpdate();
-          });
+          }, this);
         });
       }
     };
